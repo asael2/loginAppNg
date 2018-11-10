@@ -13,7 +13,6 @@ noticias:any[];
        noticias.getNews().subscribe(val => {
           this.servicio = val;
           this.noticias = this.servicio.articles;
-          console.log(this.noticias[4])
         });
   }
 

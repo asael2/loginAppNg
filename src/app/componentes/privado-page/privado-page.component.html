@@ -2,18 +2,18 @@
   <h1 class="display-3">ZONA PRIVADA!</h1>
   <p>Estas en una zona muy exclusiva</p>
 
-  <ul class="grilla">
-    <li *ngFor="let noticia of noticias">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="{{noticia.urlToImage}}" alt="Card image cap">
+
+  <div class="card-columns">
+    <div *ngFor="let noticia of noticias" class="card">
+            <img *ngIf="noticia.urlToImage" class="card-img-top" src="{{noticia.urlToImage}}" alt="Card image cap">
+            <img *ngIf="!noticia.urlToImage" class="card-img-top" src="https://via.placeholder.com/200.png/09f/fff" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{noticia.title}}</h5>
               <p class="card-text">{{noticia.content}}</p>
               <a href="{{noticia.url}}" target="_blank" class="btn btn-primary">Ver mas</a>
             </div>
-          </div>
 
-    </li>
-  </ul>
+    </div>
+  </div>
   
 </div>
