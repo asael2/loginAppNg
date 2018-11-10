@@ -34,12 +34,12 @@ export class LoginPageComponent implements OnInit {
     });
   }
 
-  onClickGoogleLogin() {
-   this.authService.loginGoogle()
-    .then((res) => {
-        this.router.navigate(['/privado']);
-    }).catch( err => console.log(err.message));
-  }
+  // onClickGoogleLogin() {
+  //  this.authService.loginGoogle()
+  //   .then((res) => {
+  //       this.router.navigate(['/privado']);
+  //   }).catch( err => console.log(err.message));
+  // }
 
   onClickFacebookLogin() {
     this.authService.loginFacebook()
@@ -48,11 +48,11 @@ export class LoginPageComponent implements OnInit {
       }).catch( err => console.log(err.message));
   }
 
-  onClickTwitterLogin() {
-    this.authService.loginTwitter()
-      .then((res) => {
-        this.router.navigate(['/privado']);
-      }).catch (err => console.log(err.message));
-  }
+  // onClickTwitterLogin() {
+  //   this.authService.loginTwitter()
+  //     .then((res) => {
+  //       this.router.navigate(['/privado']);
+  //     }).catch (err => console.log(err.message));
+  // }
 
 }
